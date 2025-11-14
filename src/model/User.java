@@ -10,6 +10,27 @@ public class User{
     this.license = license;
   }
 
+  public String getName(){
+    return name;
+  }
+  public void setName(String name){
+    this.name = name;
+  }
+
+  public String getEmail(){
+    return email;
+  }
+  public void setEmail(String email){
+    this.email = email;
+  }
+
+  public License getLicense(){
+    return license;
+  }
+  public void setLicense(License license){
+    this.license = license;
+  }
+
   @Override
   public String toString(){
     return "User: " + name + "\n"
