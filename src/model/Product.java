@@ -38,6 +38,18 @@ public class Product{
     this.price = price;
   }
 
+  public void applyDiscount(double percent){
+    if(percent < 0 || percent > 90){
+      System.out.println("Invalid discount: " + percent + "%. Must be between 0 and 90");
+      return;
+    }
+
+    double oldPrice = this.price;
+    this.price = this.price * (1 - percent / 100);
+    System.out.println("Discount applied: " + percent + "%");
+    System.out.println("Old price: " + oldPrice + " -> New price: " + this.price);
+  }
+
 
 
 

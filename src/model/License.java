@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class License{
   private final String key;
   private final String expiryDate;
@@ -19,6 +21,12 @@ public class License{
 
   public Product getProduct(){
     return product;
+  }
+
+  public boolean isExpired(){
+    LocalDate expiry = LocalDate.parse(expiryDate);
+    LocalDate today = LocalDate.now();
+    return expiry.isBefore(today);
   }
 
   @Override
