@@ -31,6 +31,17 @@ public class User{
     this.license = license;
   }
 
+  public void updateEmail(String newEmail) {
+    if (newEmail == null || !newEmail.contains("@") || !newEmail.contains(".")) {
+        System.out.println("Invalid email format: " + newEmail);
+        return;
+    }
+
+    System.out.println("Email updated from " + this.email + " to " + newEmail);
+    this.email = newEmail;
+}
+
+
   @Override
   public String toString(){
     return "User: " + name + "\n"
